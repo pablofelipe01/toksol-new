@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-void: #070a12;
+    --bg-panel: #0e1420;
+    --bg-panel-2: #141c2b;
+    --text-primary: #f5f7fa;
+    --text-muted: #9aa7bd;
+    --solar-500: #ffb020;
+    --solar-400: #ffc94d;
+    --solar-600: #f58a07;
+    --corona: #ff6a3d;
+    --plasma: #6ee7f0;
+    --border: rgba(255, 255, 255, 0.08);
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Offset anchor targets so the sticky navbar never covers a heading. */
+    scroll-padding-top: 6rem;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg-void);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: rgba(255, 176, 32, 0.28);
+    color: var(--text-primary);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--solar-500);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Dotted grid used behind hero and section bands. */
+  .bg-grid {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(255, 255, 255, 0.07) 1px,
+      transparent 0
+    );
+    background-size: 32px 32px;
+  }
+
+  .glass {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+      var(--bg-panel);
+    border: 1px solid var(--border);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #ffc94d 0%, #f58a07 60%, #ff6a3d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Masks a hero/section edge into the void background. */
+  .fade-edges {
+    -webkit-mask-image: radial-gradient(
+      ellipse 70% 70% at 50% 40%,
+      #000 40%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 70% 70% at 50% 40%,
+      #000 40%,
+      transparent 100%
+    );
+  }
+}
