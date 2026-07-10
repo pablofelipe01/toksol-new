@@ -9,7 +9,8 @@ composer.
 
 ```bash
 npm install
-npm run dev          # http://localhost:3000
+cp .env.example .env.local   # fill in Supabase creds (see "Consultation form" below)
+npm run dev                  # http://localhost:3000
 ```
 
 ## Scripts
@@ -84,15 +85,48 @@ share a page without colliding gradient ids. `markOnly` renders the mark alone.
 Clients currently render as typographic logo-cards. To use real assets, drop the
 file into `public/logos/` and set `logo` on the client in `lib/site-config.ts`.
 
+## Consultation form
+
+`/contact` captures leads and stores them in Supabase.
+
+- **Flow:** `components/ContactForm.tsx` → `POST /api/consultation`
+  (`app/api/consultation/route.ts`) → Supabase table `consultation_requests`.
+- **Server-side only:** the route uses the **service-role** key via
+  `lib/supabase-admin.ts` (guarded by `import "server-only"`). The key never
+  reaches the browser. The table has RLS enabled with **no policies**, so it is
+  unreadable and unwritable by anyone except the service role.
+- **Env:** set `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in `.env.local`
+  (gitignored). See `.env.example`. On your host (Vercel/Netlify/etc.), add the
+  same two variables. If they are absent the form degrades gracefully to a
+  prefilled `mailto:` so no lead is lost.
+- **Spam:** a hidden honeypot field and server-side validation (required name +
+  message, email format, length caps) run before any insert.
+- **Runtime:** the route is dynamic (Node). Every other page is still static —
+  don't switch the project to `output: export`, which would drop the API route.
+
+Read the leads in the Supabase dashboard → Table editor → `consultation_requests`,
+or by SQL. The table:
+
+| column       | type          | notes                        |
+| ------------ | ------------- | ---------------------------- |
+| `id`         | uuid          | primary key                  |
+| `created_at` | timestamptz   | defaults to now()            |
+| `name`       | text          | required                     |
+| `company`    | text          | optional                     |
+| `email`      | text          | optional, format-validated   |
+| `message`    | text          | required                     |
+| `source`     | text          | `'website'`                  |
+| `user_agent` | text          | for debugging                |
+
 ## Notes
 
 - All animation is CSS or framer-motion and stops under `prefers-reduced-motion`.
 - The YouTube embed is click-to-load: nothing is requested from Google until the
   visitor presses play. The cookie policy depends on this staying true.
-- The contact form is not a `<form>`. It builds a `mailto:` URL in a click
-  handler; no field ever leaves the browser.
-- Pricing is deliberately absent everywhere. Every commercial CTA resolves to a
-  consultation `mailto:`.
+- The contact form posts to the API (see "Consultation form" above) and falls
+  back to `mailto:` only if the backend is unreachable.
+- Pricing is deliberately absent everywhere. Commercial CTAs resolve to the
+  consultation form or a `mailto:`.
 
 ## Deploying
 
