@@ -14,6 +14,7 @@ export const site = {
     "TokSol engineers bespoke platforms, protocols and bonding curves for real-world asset tokenization — with permanent, two-way liquidity guaranteed by mathematics.",
   email: "pablofelipe@me.com",
   linkedin: "https://www.linkedin.com/in/pablo-f-acebedo/",
+  github: "https://github.com/pablofelipe01/toksol-new",
   video: {
     embed: "https://www.youtube.com/embed/-5-DWW9G73U",
     watch: "https://youtu.be/-5-DWW9G73U",

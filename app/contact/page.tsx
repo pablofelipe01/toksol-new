@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
 import { Container, Eyebrow, Section } from "@/components/ui";
@@ -79,6 +79,25 @@ export default function ContactPage() {
                   </span>
                   <span className="mt-1 block text-sm text-ink-muted transition-colors group-hover:text-solar-400">
                     Connect with us
+                  </span>
+                </span>
+              </a>
+
+              <a
+                href={site.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass group flex items-start gap-4 rounded-2xl p-6 shadow-panel transition-colors duration-300 hover:border-solar-500/25 hover:bg-panel-2"
+              >
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-solar-500/20 bg-solar-500/[0.07] text-solar-400">
+                  <Github className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <span>
+                  <span className="block font-display text-base font-bold tracking-tight text-ink">
+                    GitHub
+                  </span>
+                  <span className="mt-1 block text-sm text-ink-muted transition-colors group-hover:text-solar-400">
+                    View the source
                   </span>
                 </span>
               </a>

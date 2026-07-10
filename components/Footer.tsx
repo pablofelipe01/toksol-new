@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import Logo from "@/components/Logo";
 import { Container } from "@/components/ui";
 import { complianceLinks, navLinks, site } from "@/lib/site-config";
@@ -33,6 +33,15 @@ export default function Footer() {
                 className="rounded-lg border border-hairline p-2.5 text-ink-muted transition-colors hover:border-solar-500/40 hover:text-solar-400"
               >
                 <Linkedin className="h-4 w-4" />
+              </a>
+              <a
+                href={site.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TokSol on GitHub"
+                className="rounded-lg border border-hairline p-2.5 text-ink-muted transition-colors hover:border-solar-500/40 hover:text-solar-400"
+              >
+                <Github className="h-4 w-4" />
               </a>
               <a
                 href={`mailto:${site.email}`}
