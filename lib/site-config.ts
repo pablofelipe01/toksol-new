@@ -3,7 +3,7 @@
  * Edit copy, links, nav and client data here — components read from this module.
  */
 
-export const SITE_URL = "https://toksol.tech";
+export const SITE_URL = "https://toksol.io";
 
 export const site = {
   name: "TokSol",
