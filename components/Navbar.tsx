@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Logo from "@/components/Logo";
 import { Button, cn, Container } from "@/components/ui";
-import { consultationMailto, navLinks } from "@/lib/site-config";
+import { consultationHref, navLinks } from "@/lib/site-config";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -106,7 +106,7 @@ export default function Navbar() {
           </ul>
 
           <div className="hidden lg:block">
-            <Button href={consultationMailto} className="px-5 py-2.5">
+            <Button href={consultationHref} className="px-5 py-2.5">
               Request a consultation
             </Button>
           </div>
@@ -150,7 +150,7 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-            <Button href={consultationMailto} className="mt-5 w-full">
+            <Button href={consultationHref} className="mt-5 w-full">
               Request a consultation
             </Button>
           </Container>

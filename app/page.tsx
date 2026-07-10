@@ -17,7 +17,7 @@ import {
 import {
   clients,
   clientsNote,
-  consultationMailto,
+  consultationHref,
   institutional,
   taglines,
   trustRow,
@@ -56,7 +56,7 @@ export default function HomePage() {
 
           <Reveal delay={0.18}>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-              <Button href={consultationMailto} className="w-full sm:w-auto">
+              <Button href={consultationHref} className="w-full sm:w-auto">
                 Request a consultation
                 <ArrowUpRight className="h-4 w-4" />
               </Button>
@@ -313,7 +313,7 @@ export default function HomePage() {
               holders need to be able to do. Engagements are scoped individually.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-              <Button href={consultationMailto} className="w-full sm:w-auto">
+              <Button href={consultationHref} className="w-full sm:w-auto">
                 Request a consultation
                 <ArrowUpRight className="h-4 w-4" />
               </Button>

@@ -10,7 +10,7 @@ import {
   SectionHeading,
 } from "@/components/ui";
 import {
-  consultationMailto,
+  consultationHref,
   deliverables,
   pricingStatement,
   processSteps,
@@ -146,7 +146,7 @@ export default function ServicesPage() {
                 about the asset and we will tell you what building it properly involves.
               </p>
               <div className="mt-10">
-                <Button href={consultationMailto}>
+                <Button href={consultationHref}>
                   Request a consultation
                   <ArrowUpRight className="h-4 w-4" />
                 </Button>

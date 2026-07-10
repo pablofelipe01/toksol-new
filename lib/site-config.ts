@@ -32,7 +32,14 @@ export const taglines = {
   protocol: "We tokenize real assets with protocols that can't rug.",
 } as const;
 
-/** Prefilled consultation mailto used by every commercial CTA. */
+/**
+ * Where every commercial "Request a consultation" CTA points — the contact
+ * page, which hosts the form. Using a route rather than a `mailto:` means the
+ * button always does something, even for visitors with no configured mail app.
+ */
+export const consultationHref = "/contact";
+
+/** Prefilled consultation mailto, kept as a direct-email fallback. */
 export const consultationMailto = `mailto:${site.email}?subject=${encodeURIComponent(
   "TokSol — Request a consultation",
 )}&body=${encodeURIComponent(

@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import Formula, { Callout } from "@/components/Formula";
 import Reveal from "@/components/Reveal";
 import { Button, Container, Eyebrow, GlowDivider, Section } from "@/components/ui";
-import { consultationMailto } from "@/lib/site-config";
+import { consultationHref } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Technology",
@@ -292,7 +292,7 @@ export default function TechnologyPage() {
               <Button href="/whitepaper" variant="secondary" className="w-full sm:w-auto">
                 Read the whitepaper
               </Button>
-              <Button href={consultationMailto} className="w-full sm:w-auto">
+              <Button href={consultationHref} className="w-full sm:w-auto">
                 Request a consultation
                 <ArrowUpRight className="h-4 w-4" />
               </Button>

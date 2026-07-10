@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { Button, Container, Eyebrow, Section } from "@/components/ui";
-import { clients, clientsNote, consultationMailto } from "@/lib/site-config";
+import { clients, clientsNote, consultationHref } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Clients",
@@ -86,7 +86,7 @@ export default function ClientsPage() {
               Every project is scoped and priced case-by-case, against the asset and the
               jurisdiction it sits in.
             </p>
-            <Button href={consultationMailto} className="shrink-0">
+            <Button href={consultationHref} className="shrink-0">
               Request a consultation
               <ArrowUpRight className="h-4 w-4" />
             </Button>
