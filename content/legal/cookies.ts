@@ -4,10 +4,10 @@ export const cookies: LegalDoc = {
   slug: "cookies",
   title: "Cookie Policy",
   description:
-    "This TokSol website sets no cookies and uses no trackers by default; this policy explains the one exception, the click-to-play YouTube embed.",
-  lastUpdated: "10 July 2026",
+    "The TokSol website sets no cookies and uses no analytics or advertising trackers. This policy explains what that means and how to stay in control.",
+  lastUpdated: "14 July 2026",
   intro:
-    "This Cookie Policy explains how cookies and similar technologies are, and are not, used on the TokSol website. The short version is simple: by default this site sets no cookies of its own and runs no analytics or advertising trackers. This page explains what that means, describes the one third-party exception, the click-to-play YouTube video, and tells you how to stay in control of cookies in your browser.",
+    "This Cookie Policy explains how cookies and similar technologies are, and are not, used on the TokSol website. The short version is simple: this site sets no cookies of its own, embeds no third-party content, and runs no analytics or advertising trackers. This page explains what that means and tells you how to stay in control of cookies in your browser.",
   clauses: [
     {
       id: "what-are-cookies",
@@ -18,19 +18,11 @@ export const cookies: LegalDoc = {
     },
     {
       id: "we-set-none",
-      heading: "This site sets no cookies by default",
+      heading: "This site sets no cookies",
       paragraphs: [
-        "TokSol's website is a static, informational site with no accounts and no backend. It does not set any first-party cookies, and it does not use analytics, advertising, fingerprinting or social-media tracking technologies.",
-        "You can browse the whole site, including the whitepaper, without being tracked and without any cookie being placed by TokSol.",
-      ],
-    },
-    {
-      id: "youtube-embed",
-      heading: "The embedded YouTube video",
-      paragraphs: [
-        "One page includes an embedded YouTube video. To protect your privacy the video is not loaded when the page opens; nothing is requested from YouTube until you actively click to play.",
-        "When you do click play, the video is loaded from Google/YouTube. At that point Google may set its own cookies on your device and will receive your IP address and technical information as part of serving the video, under Google's own control and its own policies. This only happens because of your click; if you never play the video, YouTube receives nothing.",
-        "For details of how Google and YouTube handle this data, refer to YouTube's and Google's own privacy and cookie policies.",
+        "TokSol's website is a static, informational site with no accounts. It does not set any first-party cookies, and it does not use analytics, advertising, fingerprinting or social-media tracking technologies.",
+        "It also embeds no third-party content — no video players, no social widgets, no advertising pixels — so no other company is placed in a position to set a cookie on your device through this site.",
+        "You can browse the whole site, including the whitepaper, without being tracked and without any cookie being placed.",
       ],
     },
     {
@@ -41,8 +33,8 @@ export const cookies: LegalDoc = {
       ],
       list: [
         "Strictly necessary: required for a site to function. This site currently uses none.",
-        "Analytics or performance: measure how visitors use a site. This site uses none by default.",
-        "Marketing or advertising: track visitors to build profiles and target ads. This site uses none. The click-to-play YouTube embed may involve Google's own cookies once you play the video.",
+        "Analytics or performance: measure how visitors use a site. This site uses none.",
+        "Marketing or advertising: track visitors to build profiles and target ads. This site uses none.",
       ],
     },
     {
@@ -57,8 +49,8 @@ export const cookies: LegalDoc = {
       id: "control-cookies",
       heading: "How to control cookies in your browser",
       paragraphs: [
-        "You remain fully in control. Every major browser lets you view, block and delete cookies, including cookies that Google might set after you play the embedded video. Look in your browser's privacy or site-settings menu.",
-        "Blocking third-party cookies will not break this site, since it does not depend on cookies to work. It may, however, affect playback or features of the embedded YouTube video.",
+        "You remain fully in control. Every major browser lets you view, block and delete cookies. Look in your browser's privacy or site-settings menu.",
+        "Blocking cookies entirely will not break this site, since it does not depend on cookies to work.",
       ],
     },
     {

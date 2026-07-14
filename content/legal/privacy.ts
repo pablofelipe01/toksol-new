@@ -4,10 +4,10 @@ export const privacy: LegalDoc = {
   slug: "privacy",
   title: "Privacy Policy",
   description:
-    "How TokSol handles personal data on its informational website, including the browser-only contact form and hosting server logs.",
-  lastUpdated: "10 July 2026",
+    "How TokSol handles personal data on its informational website, including the consultation form and hosting server logs.",
+  lastUpdated: "14 July 2026",
   intro:
-    "This Privacy Policy explains what limited personal data is involved when you use the TokSol website and how we handle it. TokSol builds tokenization technology for real-world assets, and this site exists only to describe that work. It has no accounts, no login and no backend that collects or stores what you type. We have designed the site to gather as little information as possible, and this policy sets out honestly what does and does not happen when you visit.",
+    "This Privacy Policy explains what limited personal data is involved when you use the TokSol website and how we handle it. TokSol builds tokenization technology for real-world assets, and this site exists only to describe that work. It has no accounts and no login, it sets no cookies, and the only information it collects is what you deliberately type into the consultation form. We have designed the site to gather as little information as possible, and this policy sets out honestly what does and does not happen when you visit.",
   clauses: [
     {
       id: "scope",
@@ -19,10 +19,11 @@ export const privacy: LegalDoc = {
     },
     {
       id: "contact-form",
-      heading: "The contact form runs entirely in your browser",
+      heading: "The consultation form",
       paragraphs: [
-        "Our contact form does not transmit anything to a TokSol server. It runs entirely in your browser and simply composes a pre-filled email using a mailto: link, which opens in your own email application.",
-        "This means we receive your name, email address and message only if, and at the moment when, you choose to send that email yourself from your own mail client. Nothing you type is stored by, or even reaches, TokSol unless you deliberately send the email. If you close the tab before sending, we never see it.",
+        "When you submit the consultation form, the details you have entered — your name, your email address, your company if you give one, and your message — are sent to us and stored in our database so that we can read your enquiry and reply to it. We ask for nothing else, and the form collects nothing you have not typed into it.",
+        "Nothing is transmitted while you are filling the form in. Your details reach us only when you press submit; if you close the tab before submitting, we never see them.",
+        "If the form cannot reach our server, it falls back to opening a pre-filled message in your own email application. In that case nothing is stored in our database and we receive your details only if you choose to send that email yourself.",
       ],
     },
     {
@@ -37,8 +38,8 @@ export const privacy: LegalDoc = {
       id: "no-analytics",
       heading: "No analytics or advertising trackers",
       paragraphs: [
-        "By default this site loads no analytics, advertising, fingerprinting or social-media tracking scripts, and it sets no cookies of its own. We do not follow you around the web and we do not sell attention.",
-        "The one third-party element is an embedded YouTube video, which only loads after you click to play it. See our Cookie Policy for details of what YouTube may then set.",
+        "This site loads no analytics, advertising, fingerprinting or social-media tracking scripts, and it sets no cookies of its own. We do not follow you around the web and we do not sell attention.",
+        "It also embeds no third-party content, such as video players or social widgets. See our Cookie Policy for the full picture.",
       ],
     },
     {
@@ -57,7 +58,7 @@ export const privacy: LegalDoc = {
       ],
       list: [
         "Legitimate interests, for keeping the site secure and operational through hosting logs, and for responding to unsolicited enquiries you send us.",
-        "Consent, which you give by choosing to send us an email, and, separately, by clicking to play the embedded YouTube video.",
+        "Consent, which you give by choosing to send us an enquiry through the contact form or by email.",
         "Performance of a contract or steps taken at your request prior to a contract, where our correspondence concerns a possible or existing engagement.",
         "Compliance with legal obligations, where we are required to retain or disclose information by law.",
       ],
@@ -77,6 +78,7 @@ export const privacy: LegalDoc = {
       ],
       list: [
         "Our website hosting provider, which serves the site and maintains the technical server logs described above.",
+        "Our database provider, which stores the consultation requests submitted through the form so that we can act on them.",
         "Our email provider, which we use to receive and reply to the messages you choose to send us.",
       ],
     },
@@ -92,7 +94,7 @@ export const privacy: LegalDoc = {
       heading: "Data retention",
       paragraphs: [
         "Hosting server logs are retained only for as long as the hosting provider needs them for security and operations, after which they are rotated or deleted.",
-        "Emails you send us are kept for as long as needed to handle your enquiry and any resulting relationship, and thereafter only as required to meet legal, accounting or record-keeping obligations, before being deleted.",
+        "Consultation requests, and any emails you send us, are kept for as long as needed to handle your enquiry and any resulting relationship, and thereafter only as required to meet legal, accounting or record-keeping obligations, before being deleted.",
       ],
     },
     {

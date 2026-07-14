@@ -15,12 +15,6 @@ export const site = {
   email: "pablofelipe@me.com",
   linkedin: "https://www.linkedin.com/in/pablo-f-acebedo/",
   github: "https://github.com/pablofelipe01/toksol-new",
-  video: {
-    embed: "https://www.youtube.com/embed/-5-DWW9G73U",
-    watch: "https://youtu.be/-5-DWW9G73U",
-    thumbnail: "https://i.ytimg.com/vi/-5-DWW9G73U/maxresdefault.jpg",
-    title: "TokSol — an overview of bidirectional tokenization",
-  },
   trademark: "This is a registered trademark of True Social Token.",
   microDisclaimer:
     "TokSol provides tokenization engineering services. Nothing on this site is investment, legal, tax, or financial advice, or an offer or solicitation.",

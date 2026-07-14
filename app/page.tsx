@@ -4,7 +4,6 @@ import SolarCore from "@/components/SolarCore";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import Formula from "@/components/Formula";
-import VideoEmbed from "@/components/VideoEmbed";
 import {
   Button,
   Card,
@@ -204,25 +203,8 @@ export default function HomePage() {
         </Reveal>
       </Section>
 
-      {/* ── Video ────────────────────────────────────────────────────────── */}
-      <Section id="video" className="border-y border-hairline bg-panel/20">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Overview"
-            title="See the approach."
-            intro="A short introduction to bidirectional tokens, the reserve invariant, and what it means to make solvency a property of the protocol rather than a claim in a prospectus."
-            align="center"
-          />
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div className="mx-auto mt-14 max-w-4xl">
-            <VideoEmbed />
-          </div>
-        </Reveal>
-      </Section>
-
       {/* ── Clients ──────────────────────────────────────────────────────── */}
-      <Section id="clients">
+      <Section id="clients" className="border-t border-hairline">
         <Reveal>
           <SectionHeading eyebrow="Clients" title="Selected engagements." intro={clientsNote} />
         </Reveal>
