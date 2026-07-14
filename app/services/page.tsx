@@ -10,6 +10,7 @@ import {
   SectionHeading,
 } from "@/components/ui";
 import {
+  billingStatement,
   consultationHref,
   deliverables,
   pricingStatement,
@@ -153,6 +154,16 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
+        </Reveal>
+      </Section>
+
+      {/* ── How we bill ──────────────────────────────────────────────────── */}
+      <Section className="border-t border-hairline bg-panel/20">
+        <Reveal>
+          <SectionHeading eyebrow="Billing" title="How we bill." />
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-ink-muted">
+            {billingStatement}
+          </p>
         </Reveal>
       </Section>
     </>

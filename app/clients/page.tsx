@@ -62,9 +62,15 @@ export default function ClientsPage() {
                   {client.name}
                 </h2>
                 <p className="mt-2 text-sm font-medium text-solar-400">{client.descriptor}</p>
-                <p className="mt-4 flex-1 text-base leading-relaxed text-ink-muted">
-                  {client.blurb}
-                </p>
+                <p className="mt-4 text-base leading-relaxed text-ink-muted">{client.blurb}</p>
+
+                <div className="flex-1">
+                  {client.note ? (
+                    <p className="mt-4 rounded-lg border border-hairline bg-void/40 px-4 py-3 text-sm leading-relaxed text-ink-muted">
+                      {client.note}
+                    </p>
+                  ) : null}
+                </div>
 
                 <a
                   href={client.url}

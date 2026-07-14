@@ -1,9 +1,9 @@
 # TokSol — marketing site
 
-Production-ready marketing website for **TokSol**, a bidirectional tokenization
-services company. Next.js (App Router) + TypeScript + Tailwind CSS. No backend,
-no database, no wallet connect — the contact flow is a client-side `mailto:`
-composer.
+Production-ready marketing website for **TokSol**, a blockchain engineering firm
+that builds tokenization infrastructure for real-world assets. Next.js (App
+Router) + TypeScript + Tailwind CSS. No wallet connect — the contact flow is a
+Supabase-backed consultation form.
 
 ## Getting started
 

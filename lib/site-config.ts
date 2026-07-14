@@ -9,9 +9,9 @@ export const site = {
   name: "TokSol",
   /** Rendered as `Tok` + accent-coloured `Sol`. */
   wordmark: { lead: "Tok", accent: "Sol" },
-  positioning: "Bidirectional tokenization for real-world assets.",
+  positioning: "Blockchain engineering for real-world assets.",
   description:
-    "TokSol engineers bespoke platforms, protocols and bonding curves for real-world asset tokenization — with permanent, two-way liquidity guaranteed by mathematics.",
+    "TokSol is a blockchain engineering firm. We design and build tokenization infrastructure for real-world assets — a bespoke platform, protocol and bonding curve, engineered per asset.",
   email: "pablofelipe@me.com",
   linkedin: "https://www.linkedin.com/in/pablo-f-acebedo/",
   github: "https://github.com/pablofelipe01/toksol-new",
@@ -26,9 +26,14 @@ export const site = {
     "TokSol provides tokenization engineering services. Nothing on this site is investment, legal, tax, or financial advice, or an offer or solicitation.",
 } as const;
 
+/** Regulatory-facing billing statement. Rendered on /services and in the footer. */
+export const billingStatement =
+  "Toksol is a professional services firm. Fees are quoted per engagement and invoiced in fiat via Stripe Invoicing. Toksol does not sell, issue, exchange or custody tokens or digital assets, and does not process consumer payments.";
+
 export const taglines = {
-  hero: "Bidirectional tokenization for real-world assets.",
-  liquidity: "Permanent, two-way liquidity — guaranteed by math, not by promises.",
+  hero: "Blockchain engineering for real-world assets.",
+  liquidity:
+    "Two-way liquidity as a property of the protocol — enforced by the curve, not promised by us.",
   protocol: "We tokenize real assets with protocols that can't rug.",
 } as const;
 
@@ -70,6 +75,8 @@ export type Client = {
   url: string;
   descriptor: string;
   blurb: string;
+  /** Status qualifier shown beneath the card. Use for non-commercial work. */
+  note?: string;
   /** Drop a real logo file in `public/logos/` and set its path here. */
   logo?: string;
 };
@@ -81,6 +88,7 @@ export const clients: Client[] = [
     descriptor: "Social tokenization protocol on Solana.",
     blurb:
       "The reference implementation of the bidirectional engine: bonding-curve tokens with permanent two-way liquidity and an on-chain reserve no administrator can touch.",
+    note: "Research prototype — Solana devnet. Not a commercial product.",
   },
   {
     name: "Inverse Neural Lab",
@@ -222,14 +230,18 @@ export const deliverables = [
 export const pricingStatement =
   "Engagements are scoped individually. We quote each project case-by-case.";
 
-/** Institutional context. Directional ranges only — no single-point forecasts. */
+/**
+ * Institutional context. Deliberately makes no market-size forecast and carries
+ * no third-party endorsement — this is a services firm, not an investment case.
+ */
 export const institutional = {
-  intro:
-    "The tokenization of real-world assets is not a fringe thesis. It is being underwritten by the largest financial institutions in the world.",
-  body: "Analyses published by firms including BCG, Standard Chartered and McKinsey project the market for tokenized real-world assets growing from the tens of billions of dollars today to the trillions within the decade. These are projections with wide dispersion, not guarantees — the estimates differ substantially in both scope and method. What they agree on is direction.",
-  quote: {
-    text: "Every stock, every bond … every asset can be tokenized.",
-    author: "Larry Fink",
-    role: "Chairman and CEO, BlackRock",
-  },
+  intro: "The demand is no longer the hard part. The engineering is.",
+  body: "Tokenization of real-world assets has moved from pilot to procurement inside large institutions. What has not kept pace is the engineering. Most tokenized assets can be issued but not exited; most reserves are asserted in a report rather than verifiable on-chain; most protocols retain an administrative path to holder funds. Those are engineering failures, and they are the reason projects stall after launch. We take no view on how large this market becomes — we build against the failures.",
+  requirementsTitle: "What that demands of the build",
+  requirements: [
+    "An exit, not just an issuance. A holder who cannot sell owns a certificate, not an asset.",
+    "Solvency anyone can check, at any time, without asking us.",
+    "No administrative back door — no privileged path to holder funds in the deployed program.",
+    "A protocol shaped by the asset and its jurisdiction, not a template applied to both.",
+  ],
 } as const;

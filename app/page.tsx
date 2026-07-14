@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Quote } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import SolarCore from "@/components/SolarCore";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
@@ -41,16 +41,16 @@ export default function HomePage() {
 
           <Reveal delay={0.05}>
             <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold leading-[1.05] tracking-tightest text-ink sm:text-6xl lg:text-7xl">
-              Bidirectional tokenization for{" "}
+              Blockchain engineering for{" "}
               <span className="text-gradient">real-world assets.</span>
             </h1>
           </Reveal>
 
           <Reveal delay={0.12}>
             <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
-              TokSol studies your assets and engineers a bespoke platform, protocol, and
-              bonding curve — with permanent, two-way liquidity guaranteed by mathematics,
-              not promises.
+              TokSol is an engineering firm. We study your asset, then design and build the
+              platform, protocol, and bonding curve it needs — systems whose solvency anyone
+              can verify on-chain, rather than take on trust.
             </p>
           </Reveal>
 
@@ -244,6 +244,11 @@ export default function HomePage() {
                   <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                     {client.descriptor}
                   </p>
+                  {client.note ? (
+                    <p className="mt-3 text-xs leading-relaxed text-ink-muted/80">
+                      {client.note}
+                    </p>
+                  ) : null}
                 </div>
                 <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-solar-400">
                   Visit site
@@ -279,19 +284,22 @@ export default function HomePage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <figure className="glass flex h-full flex-col justify-center rounded-2xl p-8 shadow-panel sm:p-10">
-              <Quote className="h-8 w-8 text-solar-500/40" aria-hidden="true" />
-              <blockquote className="mt-6">
-                <p className="font-display text-2xl font-semibold leading-snug tracking-tight text-ink sm:text-3xl">
-                  “{institutional.quote.text}”
-                </p>
-              </blockquote>
-              <figcaption className="mt-6 text-sm text-ink-muted">
-                <span className="font-semibold text-ink">{institutional.quote.author}</span>
-                <br />
-                {institutional.quote.role}
-              </figcaption>
-            </figure>
+            <div className="glass flex h-full flex-col justify-center rounded-2xl p-8 shadow-panel sm:p-10">
+              <h3 className="font-display text-lg font-bold tracking-tight text-ink">
+                {institutional.requirementsTitle}
+              </h3>
+              <ul className="mt-6 space-y-4">
+                {institutional.requirements.map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span
+                      aria-hidden="true"
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-solar-500"
+                    />
+                    <span className="text-sm leading-relaxed text-ink-muted">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </Reveal>
         </div>
       </Section>

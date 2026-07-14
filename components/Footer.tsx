@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Logo from "@/components/Logo";
 import { Container } from "@/components/ui";
-import { complianceLinks, navLinks, site } from "@/lib/site-config";
+import { billingStatement, complianceLinks, navLinks, site } from "@/lib/site-config";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -21,8 +21,8 @@ export default function Footer() {
               <Logo idPrefix="footer" />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
-              {site.positioning} We engineer bespoke platforms, protocols and bonding curves
-              for the assets you already own.
+              {site.positioning} We design and build a bespoke platform, protocol and bonding
+              curve for the assets you already own.
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a
@@ -90,9 +90,10 @@ export default function Footer() {
           </nav>
         </div>
 
-        <p className="mt-14 max-w-3xl border-t border-hairline pt-8 text-xs leading-relaxed text-ink-muted">
-          {site.microDisclaimer}
-        </p>
+        <div className="mt-14 max-w-3xl space-y-3 border-t border-hairline pt-8">
+          <p className="text-xs leading-relaxed text-ink-muted">{billingStatement}</p>
+          <p className="text-xs leading-relaxed text-ink-muted">{site.microDisclaimer}</p>
+        </div>
 
         <div className="mt-6 flex flex-col gap-2 text-xs text-ink-muted sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} TokSol. All rights reserved.</p>

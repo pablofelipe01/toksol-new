@@ -58,8 +58,8 @@ export default function OpenGraphImage() {
             {taglines.hero}
           </div>
           <div style={{ display: "flex", fontSize: 28, color: "#9AA7BD", lineHeight: 1.4 }}>
-            Bespoke platforms, protocols and bonding curves — with permanent, two-way
-            liquidity guaranteed by mathematics.
+            We design and build a bespoke platform, protocol and bonding curve for the assets
+            you already own.
           </div>
         </div>
 
